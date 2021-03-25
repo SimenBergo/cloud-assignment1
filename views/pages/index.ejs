@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="main.css" rel="stylesheet" type="text/css" />
+    <title>ABC Bank</title>
+</head>
+    <body>
+        <header>
+            <h1>ABC BANK</h1>
+            <nav>
+                <a href="#">Search for user</a>
+                <a href="/createuser">Create user</a>
+                <a href="/updateuser">Update user</a>
+                <a href="/deleteuser">Delete user</a>
+                <a href="/latency">Test latency</a>
+            </nav>
+        </header>
+        <!--Our form where you can fill out the personal number to search the database-->
+        <h2>Search for user in our system</h2>
+        <form action="/checkaccountnr" method="GET">
+            <label for="personal_nr" >Personal Number: </label> 
+
+            <input type="text" id="personal_nr" minlength="11" maxlength="11" name="personal_nr" placeholder="Personal Number"
+            title="Please fill out the personal number." required>
+            <br>
+            <input type="submit" value="Search for user">
+
+        </form>
+        <!--This is where the output from searching the database will be posted-->
+        <div class="output">  
+            <% if (locals.response) { %>
+                <%= response %>
+                    <% } %>         
+        </div>
+
+
+
+
+        <div id="latency">
+
+        </div>
+    </body>
+    </html>

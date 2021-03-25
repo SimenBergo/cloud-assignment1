@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="main.css" rel="stylesheet" type="text/css" />
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+    <title>ABC Bank - Delete</title>
+</head>
+<body>
+
+    <header>
+        <h1>ABC BANK</h1>
+   
+    <nav>
+        <a href="/">Search for user</a>
+        <a href="/createuser">Create user</a>
+        <a href="/updateuser">Update user</a>
+        <a href="#">Delete user</a>
+    </nav>
+     </header>
+
+     <h2>Delete user</h2>
+     <form action="/deleteuser" method="POST">
+        <label for="personal_nr">Personal Number:</label>
+        <input type="text" id="personal_nr" name="personal_nr" minlength="11" maxlength="11" placeholder="Personal number"
+        title="Personal Number" required>
+        <br>
+        <input id="delete" type="submit" value="Delete user">
+    </form>
+
+    <div class="output">
+        <% if (locals.response) { %>
+            <%= response %>
+                <% } %>
+    </div>
+</body>
+</html>

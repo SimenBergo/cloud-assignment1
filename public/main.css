@@ -1,0 +1,81 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #CAD2C5;
+    background-color: #2F3E46;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    margin: 0;
+}
+
+header{
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    border: 3px solid #354F52;
+    margin: 0;
+    padding: 2%;
+}
+h1 {
+    justify-content: center;
+    align-items: center;
+    margin: 0 33.5% 0 2%;
+}
+
+h2{
+    margin: 5% 0;
+}
+
+nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+a {
+    color: #CAD2C5;
+    text-decoration: none;
+    padding: 0 1%;
+}
+a:hover {
+    color: #52796F;
+    transform: scale(1.05);
+}
+
+form{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    margin: 2%;
+}
+
+input, label {
+    padding: 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="submit" i] {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 2%;
+    
+}
+input[type="submit" i]:hover {
+    color: #52796F;
+    transform: scale(1.1);
+}
+
+input[placeholder]{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.output{
+    margin: 3%;
+    color: #84A98C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1%;
+}

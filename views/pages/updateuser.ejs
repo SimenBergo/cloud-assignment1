@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="main.css" rel="stylesheet" type="text/css" />
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+    <title>ABC Bank - Update user</title>
+</head>
+<body>
+
+    <header>
+        <h1>ABC BANK</h1>
+    <nav>
+        <a href="/">Search for user</a>
+        <a href="/createuser">Create user</a>
+        <a href="#">Update user</a>
+        <a href="/deleteuser">Delete user</a>
+    </nav>
+    </header>
+
+    <h2>Update user</h2>
+    <form action="/updateuser" method="POST">
+    <label for="personal_nr">Personal Number:</label>
+    <input type="number" id="personal_nr" name="personal_nr" minlength="11" maxlength="11"
+    placeholder="Personal Number" required>
+        <h4>Update preferred fields:</h4>
+    <label for="firstname">First Name:</label>
+    <input type="text" id="firstname" name="firstname" placeholder="First Name">
+
+    <label for="lastname">Last Name:</label>
+    <input type="text" id="lastname" name="lastname" placeholder="Last Name">
+
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" placeholder="city">
+    <br>
+    <input type="submit" value="Update user">
+    </form>
+
+    <div class="output">
+        <% if (locals.response) { %>
+            <%= response %>
+                <% } %>
+
+    </div>
+
+</body>
+</html>
