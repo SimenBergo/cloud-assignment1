@@ -34,7 +34,7 @@ router.post("/createuser", async (req, res) => {
 //For measuiring end to end latency.
 router.post(
   '/latency', (req, res) => {
-    let personalNumber = 1234567890;
+    let personalNumber = 33445233422;
     let start = new Date().getTime();
     UserModel.findOne({ personal_nr: personalNumber })
     .then(result => {
